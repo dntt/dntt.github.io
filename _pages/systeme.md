@@ -10,4 +10,4 @@ header:
   image: /assets/images/bandeau-systeme.png
 ---
 
-Sample document listing for the collection `_systeme`.
+L'approche systémique et l'intelligence collective
