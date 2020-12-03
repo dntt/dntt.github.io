@@ -1,0 +1,25 @@
+---
+title: "Motivation"
+excerpt: "BD sur la pédagogie."
+header:
+  image: /pedagogie/BD/motivation/bandeau.png
+  teaser: /pedagogie/BD/motivation/couverture.png
+sidebar:
+  - title: "Présentation"
+    image: /pedagogie/BD/motivation/couverture.png
+    image_alt: "Couverture de la BD"
+    text: "Pour lancer le questionnement sur la pédagogie dans l'enseignement supérieur"
+  - title: "Utilisation"
+    text: "Vous pouvez lire cette BD pour le plaisir, pour réfléchir, dans des ateliers de formation, pour sensibiliser, ..."
+gallery:
+  - url: /pedagogie/BD/motivation/page-01.png
+    alt: "Page 1"
+  - url: /pedagogie/BD/motivation/page-02.png
+    alt: "Page 2"
+  - url: /pedagogie/BD/motivation/page-03.png
+    alt: "Page 3"
+---
+
+{% include gallery caption="Cliquez sur une page pour feuilleter la BD." %}
+
+
