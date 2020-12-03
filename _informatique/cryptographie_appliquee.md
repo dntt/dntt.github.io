@@ -1,0 +1,79 @@
+---
+title: "Cryptographie appliquée"
+excerpt: "Vieux supports de cryptographie appliquée"
+header:
+image: /assets/images/unsplash-gallery-image-1.jpg
+teaser: assets/images/unsplash-gallery-image-1-th.jpg
+---
+
+J'ai écris ces supports pour les enseignements que j'ai assuré de 2007 à 2014 dans un module de la licence professionnelle réseaux et sécurité.
+Il y a de la "vieille cryptographie", celle d'avant les ordinateurs et les grands principes de la cryptographie moderne, mais sans une ligne de math à part un rappel sur les nombres premiers.
+
+- [Introduction et histoire de la cryptographie](/informatique/cryptographie-appliquee/cours-crypto-ancienne.pdf)
+    - Besoin et enjeux de la sécurité
+    - Historique du chiffrement
+    - Stéganographie
+    - Codage
+    - Cryptographie symétrique
+    -     Substitution mono-alphabétique
+    - Cryptographie symétrique
+    -         Substitution poly-alphabétique
+    -     Chiffrement asymétrique
+- [Introduction à la cryptographie moderne](/informatique/cryptographie-appliquee/cours-crypto-moderne.pdf)
+    - Les algorithmes de base
+    - Code ASCII
+    - Réseaux de Feistel, DES, AES, IDEA
+    - Algorithme de Diffie-Hellman-Merkle
+    - Algorithme RSA
+    - Intégrité : Les fonctions de hachage (MD5, SHA1)
+    - Les procédés cryptographiques
+    - Confidentialité
+    - Signatures, Sceau
+    - Challenges et authentification
+    - Mots de passe jetables
+- [Le chiffrement dans les applications](/informatique/cryptographie-appliquee/cours-applications.pdf)
+    - /etc/passwd
+    - MD5, SHA
+    - PGP/GPG
+    - SSH, telnet et OPIE
+- [Les certificats](/informatique/cryptographie-appliquee/cours-certificat.pdf)
+    - Architecture PKI (IGC)
+    - SSL/TLS
+    - Certificats X509
+- [Supports divers de la cryptographie](/informatique/cryptographie-appliquee/cours-divers.pdf)
+    - WEP, WPA, WPA2, RADIUS, EAP
+    - Cartes à puces, biométrie
+    - RFID
+    - Tatouage
+
+Supports de TD
+
+- [Exercice de chiffrement et de déchiffrement d'algorithmes anciens](/informatique/cryptographie-appliquee/td-1.introduction.pdf)
+    - scytale
+    - César
+    - Substitution mono-alphabétique
+    - Carré de Vigénère
+    - Utilisation des applications de l'excellent site apprendre-en-ligne de Didier Müller pour la résolution d'autres exercices de chiffrement/déchiffrement
+    - Fichier pour copier-coller les codes a dechiffrer
+- [Cryptographie moderne](/informatique/cryptographie-appliquee/td-2.moderne.pdf)
+    - Réseaux de Feistel
+    - Algorithme de Diffie-Hellman-Merkle
+    - RSA [Fichier Inverse.class]
+- [Application de la cryptographie moderne](/informatique/cryptographie-appliquee/td-4.applications.pdf)
+    - MD5, SHA (1, 256, 1024)
+    - GPG
+    - SSH
+    - telnet, Mot de passe jetable avec OPIE
+- [Architecture PKI (IGC)](/informatique/cryptographie-appliquee/td-5.certificat.pdf)
+    - OpenSSL
+    - HTTPS
+- [Wifi](/informatique/cryptographie-appliquee/td-6.wifi.pdf)
+- [Radius](/informatique/cryptographie-appliquee/td-6.wifi-radius.pdf)
+
+# Pratique
+## Livres URL conseillés :
+- Histoire des codes secrets - Simon Singh - Le livre de poche
+- Les codes secrets décryptés - Didier Muller
+
+## URL conseillé :
+- [Le site Apprendre en ligne de Didier Müller](http://www.apprendre-en-ligne.net/crypto/)

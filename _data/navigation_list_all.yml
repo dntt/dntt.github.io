@@ -1,0 +1,44 @@
+# main links
+main:
+  - title: "Sample Post"
+    url: /year-archive/
+  - title: "archive-layout-with-content"
+    url: /archive-layout-with-content/
+  - title: "category-archive-grid"
+    url: /category-archive-grid/
+  - title: "category-archive"
+    url: /category-archive/
+  - title: "edge-case-grid"
+    url: /edge-case-grid/
+  - title: "edge-case"
+    url: /edge-case/
+  - title: "lorem-ipsum"
+    url: /lorem-ipsum/
+  - title: "markup-grid"
+    url: /markup-grid/
+  - title: "markup"
+    url: /markup/
+  - title: "page-a"
+    url: /page-a/
+  - title: "page-b"
+    url: /page-b/
+  - title: "portfolio-archive"
+    url: /portfolio-archive/
+  - title: "recipes-archive"
+    url: /recipes-archive/
+  - title: "sample-page"
+    url: /sample-page/
+  - title: "search"
+    url: /search/
+  - title: "sitemap"
+    url: /sitemap/
+  - title: "splash-page"
+    url: /splash-page/
+  - title: "tag-archive-grid"
+    url: /tag-archive-grid/
+  - title: "tag-archive"
+    url: /tag-archive/
+  - title: "terms"
+    url: /terms/
+  - title: "year-archive-grid"
+    url: /year-archive-grid/

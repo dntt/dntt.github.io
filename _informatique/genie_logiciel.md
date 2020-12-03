@@ -1,0 +1,52 @@
+---
+title: "Génie logiciel et outils pour la programmation"
+excerpt: "Vieux supports de génie logiciel"
+header:
+image: /assets/images/unsplash-gallery-image-1.jpg
+teaser: assets/images/unsplash-gallery-image-1-th.jpg
+---
+
+J'ai écris ces supports pour les enseignements que j'ai assuré de 2004 à 2010 dans un module de 2ème année de licence informatique.
+
+*Autant dire que les supports sont obsolètes...*
+
+Certains des grands principes sont encore applicables, mais les commandes et les outils nécessitent un bon coup de dépoussiérage si vous lisez ces (vieux) supports.
+
+# Supports de cours
+
+## Présentation d'outils de développement
+- [Gestion de version (diff/patch, RCS, CVS, subversion)]
+- [Tests](/informatique/genie-logiciel/cours-2.tests.pdf)
+    - tests de couverture : jcoverage, clover, emma (java), checker (C)
+    - tests de fuite mémoire : jpurify
+    - tests de non-regression
+    - correction
+    -     traces : log4j (Java), syslog (C)
+- [Gestion de bugs](/informatique/genie-logiciel/cours-3.bugs.pdf)
+    - déboggueur (jdb (Java)/gdb (C) sur ddd)
+    - report de bug
+    -     bugzilla
+- [Automatisation pour compilation, jeu de test, déploiement](/informatique/genie-logiciel/cours-4.developpement.pdf)
+    - Internationalisation
+    - Portabilité
+    - documentation, convention de codage, javadoc
+
+## Rapport et documentation
+- [organisation d'un rapport de projet](/informatique/genie-logiciel/cours-5.documentation.pdf)
+LaTeX et Cie. [Sources LaTeX d'un exemple de document LaTeX]
+Transparents de présentation [Sources LaTeX (+paquetage beamer) d'un exemple de présentation]
+- Exemple de présentation à ne pas faire powerpoint](/informatique/genie-logiciel/contre-exemple.pdf)
+
+# Supports de TD
+
+- [SVN](/informatique/genie-logiciel/td-2.svn.pdf)
+- [UML](/informatique/genie-logiciel/td-3.uml.pdf)
+- [LaTeX](/informatique/genie-logiciel/td-4.latex.pdf)
+- [Javadoc](/informatique/genie-logiciel/td-5.javadoc.pdf)
+- [Débogage](/informatique/genie-logiciel/td-6.debugueur.pdf)
+- [log4j](/informatique/genie-logiciel/td-7.log4j.pdf)
+- [Testcase + Junit + EclEmma](/informatique/genie-logiciel/td-8.couverture.pdf)
+- [Présentation avec OpenOffice](/informatique/genie-logiciel/td-9.presentation.pdf)
+- [Présentation avec LaTeX Beamer](/informatique/genie-logiciel/td-10.beamer.pdf)
+- [Portabilité, Internationalisation, Localisation
+- [Rédiger le cahier des charges du projet](/informatique/genie-logiciel/td-cahier.pdf)
