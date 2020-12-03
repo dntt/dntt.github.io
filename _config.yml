@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "sunrise" # "air", "aqua", "contrast", "dark", "dirt"
 locale                   : "fr-FR"
 title                    : "DNTT"
 title_separator          : "- "
-subtitle                 : "Tuyêt Trâm DANG NGOC" # site tagline that appears below site title in masthead
+subtitle                 : "Pédagogie, Informatique & Systèmes" # site tagline that appears below site title in masthead
 name                     : "Tuyêt Trâm DANG NGOC"
 description              : "Enseignante-Chercheuse en Systèmes Informatiques #Pedagogie #IntelligenceCollective" #Science #Curiosité
 url                      : &url 'https://dntt.github.io' # the base hostname & protocol for your site 
