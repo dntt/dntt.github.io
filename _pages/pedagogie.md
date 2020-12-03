@@ -9,5 +9,3 @@ classes: wide
 header:
   image: /assets/images/bandeau-pedagogie.png
 ---
-
-Sample document listing for the collection `_pedagogie`.
