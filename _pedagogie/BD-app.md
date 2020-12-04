@@ -1,9 +1,9 @@
 ---
-title: "Apprentissage Par Problème"
+title: "Apprentissage par Problème (APP)"
 excerpt: "BD sur la pédagogie."
 header:
-  image: /pedagogie/BD/app/bandeau.png
-  teaser: /pedagogie/BD/app/couverture.png
+  image: /pedagogie/BD/introduction/bandeau.png
+  teaser: /pedagogie/BD/introduction/couverture.png
 sidebar:
   - title: "Présentation"
     image: /pedagogie/BD/app/couverture.png
@@ -11,6 +11,7 @@ sidebar:
     text: "Pour lancer le questionnement sur la pédagogie dans l'enseignement supérieur"
   - title: "Utilisation"
     text: "Vous pouvez lire cette BD pour le plaisir, pour réfléchir, dans des ateliers de formation, pour sensibiliser, ..."
+
 gallery:
   - url: /pedagogie/BD/app/page-01.png
     alt: "Page 1"
