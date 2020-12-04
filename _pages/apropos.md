@@ -11,7 +11,7 @@ header:
 
 - une réflexion sur la pédagogie
 
-- une approche systèmique
+- l'enseignement de l'informatique, en particulier des réseaux et des systèmes
 
 - ce qui touche à la pensée systémique et aux systèmes : les écosystèmes, le collectif, l'intelligence collective, la permaculture 
 
@@ -26,5 +26,3 @@ Vous y trouverez :
 - Les ressources d'enseignement (plutôt orientées informatique) que je mets à disposition de la communauté 
 
 - Quelques billets de blogs 
-
-
