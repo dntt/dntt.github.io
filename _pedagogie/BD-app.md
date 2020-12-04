@@ -41,9 +41,9 @@ gallery:
     alt: "Page 13"
   - url: /pedagogie/BD/app/page-14.png
     alt: "Page 14"
---
+---
+
 {% include gallery caption="-> Cliquez sur une page pour feuilleter la BD." %}
 
 # Références
 Raucent, B., & Vander Borght, C. (2006). Etre enseignant: Magister? Metteur en scène?. De Boeck Supérieur.
-
