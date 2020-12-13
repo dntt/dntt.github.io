@@ -279,13 +279,13 @@ collections:
   portfolio:
     output: true
     permalink: /:collection/:path/
-  informatique:
-    output: true
-    permalink: /:collection/:path/
   systeme:
     output: true
     permalink: /:collection/:path/
   pedagogie:
+    output: true
+    permalink: /:collection/:path/
+  informatique:
     output: true
     permalink: /:collection/:path/
 

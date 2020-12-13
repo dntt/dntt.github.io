@@ -8,6 +8,5 @@ entries_layout: grid
 classes: wide
 header:
   image: /assets/images/bandeau-informatique.png
-
 ---
 
