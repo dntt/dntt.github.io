@@ -6,15 +6,106 @@ main:
     url: /informatique/
   - title: "Pédagogie"
     url: /pedagogie/
-  - title: "Systémique et intelligence collective"
+  - title: "Intelligence collective"
     url: /systeme/
   - title: "Mon portfolio"
     url: /portfolio/
+#
+#  - title: "Posts"
+#    url: /year-archive/
+#  - title: "Catégories"
+#    url: /category-archive/
+#  - title: "Tag"
+#    url: /tag-archive/
 
-  - title: "Posts"
-    url: /year-archive/
-  - title: "Catégories"
-    url: /category-archive/
-  - title: "Tag"
-    url: /tag-archive/
+# documentation links
+informatique:
+  - title: Culture générale sur l'informatique
+    children:
+      - title: "Représenter le monde en binaire"
+        url: /informatique/quick-start-guide/
+      - title: "Stocker l'information"
+        url: /informatique/structure/
+      - title: "Communiquer l'information"
+        url: /informatique/installation/
+      - title: "Traiter l'information"
+        url: /informatique/upgrading/
+      - title: "Intégrer l'information"
+        url: /informatique/upgrading/
+  - title: Stocker
+    children:
+      - title: "Du fichier aux SGBD"
+        url: /informatique/posts/
+      - title: "Big Data"
+        url: /informatique/posts/
+  - title: Communiquer
+    children:
+      - title: "Introduction au modèle IP"
+        url: /informatique/stylesheets/
+      - title: "Services réseaux"
+        url: /informatique/javascript/
+      - title: "Infrastructure réseaux"
+        url: /informatique/javascript/
+  - title: Traiter
+    children:
+      - title: "Programmer"
+        url: /informatique/history/
+      - title: "Programmer en C"
+        url: /informatique/contributing/
+      - title: "Programmer en Python"
+        url: /informatique/docs-2-2/
+  - title: Intégrer
+    children:
+      - title: "Génie logiciel"
+        url: /informatique/history/
+      - title: "Informatique embarquée"
+        url: /informatique/contributing/
+  - title: Gérer et protéger
+    children:
+      - title: "Administration système"
+        url: /informatique/history/
+      - title: "Sécurité réseaux"
+        url: /informatique/contributing/
 
+# sidebar navigation list sample
+sidebar-sample:
+  - title: "Parent Page A"
+    children:
+      - title: "Child Page A1"
+        url: /
+      - title: "Child Page A2"
+        url: /
+      - title: "Child Page A3"
+        url: /
+      - title: "Child Page A4"
+        url: /
+  - title: "Parent Page B"
+    children:
+      - title: "Child Page B1"
+        url: /
+      - title: "Child Page B2"
+        url: /
+      - title: "Child Page B3"
+        url: /
+      - title: "Child Page B4"
+        url: /
+      - title: "Child Page B5"
+        url: /
+  - title: "Parent Page C"
+    children:
+      - title: "Child Page C1"
+        url: /
+      - title: "Child Page C2"
+        url: /
+      - title: "Child Page C3"
+        url: /
+      - title: "Child Page C4"
+        url: /
+      - title: "Child Page C5"
+        url: /
+  - title: "Parent Page D"
+    children:
+      - title: "Child Page D1"
+        url: /
+      - title: "Child Page D2"
+        url: /

@@ -1,0 +1,681 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="fr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Couches et protocoles IP -  DNTT</title>
+<meta name="description" content="Le modèle IP, les couches, les protocoles">
+
+
+  <meta name="author" content="Tuyêt Trâm DANG NGOC">
+  
+  <meta property="article:author" content="Tuyêt Trâm DANG NGOC">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="DNTT">
+<meta property="og:title" content="Couches et protocoles IP">
+<meta property="og:url" content="http://localhost:4000/informatique/2.reseaux/1.introduction_aux_reseaux/">
+
+
+  <meta property="og:description" content="Le modèle IP, les couches, les protocoles">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/informatique/fond/fond_reseaux.png">
+
+
+
+  <meta name="twitter:site" content="@dntt">
+  <meta name="twitter:title" content="Couches et protocoles IP">
+  <meta name="twitter:description" content="Le modèle IP, les couches, les protocoles">
+  <meta name="twitter:url" content="http://localhost:4000/informatique/2.reseaux/1.introduction_aux_reseaux/">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="http://localhost:4000/informatique/fond/fond_reseaux.png">
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2021-01-08T13:01:57+01:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/informatique/2.reseaux/1.introduction_aux_reseaux/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Tuyêt Trâm DANG NGOC",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="DNTT Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/logo.png" alt=""></a>
+        
+        <a class="site-title" href="/">
+          DNTT
+          <span class="site-subtitle">Pédagogie, Informatique & Systèmes</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/apropos/">À propos</a>
+            </li><li class="masthead__menu-item">
+              <a href="/informatique/">Informatique</a>
+            </li><li class="masthead__menu-item">
+              <a href="/pedagogie/">Pédagogie</a>
+            </li><li class="masthead__menu-item">
+              <a href="/systeme/">Intelligence collective</a>
+            </li><li class="masthead__menu-item">
+              <a href="/portfolio/">Mon portfolio</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero"
+  style=" background-image: url('');"
+>
+  
+    <img src="/informatique/fond/fond_reseaux.png" alt="Couches et protocoles IP" class="page__hero-image">
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+        <img src="/informatique/icones/intro_reseaux.png"
+             alt="Introduction aux réseaux">
+      
+      <h3>Présentation</h3>
+      
+      
+    
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Couches et protocoles IP">
+    <meta itemprop="description" content="Le modèle IP, les couches, les protocoles">
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Couches et protocoles IP
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h1 id="introduction-aux-réseaux-et-au-modèle-ip">Introduction aux réseaux et au modèle IP</h1>
+<p>Dans cette série de vidéos, vous apprendrez à :</p>
+<ul>
+  <li>représenter les 5 couches du modèle IP</li>
+  <li>expliquer le principe de l’encapsulation des protocoles</li>
+  <li>expliquer l’intérêt d’IPv4</li>
+</ul>
+
+<h2 id="communiquer-linformation--lidée-générale">Communiquer l’information : l’idée générale…</h2>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/_X_FY0s6JPY" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devriez être capable de répondre aux questions suivantes :</p>
+
+<ul>
+  <li>Que veut dire transmettre l’information ?</li>
+  <li>Pouvez-vous citer quelques supports utilisés pour transmettre de l’information ?</li>
+</ul>
+
+<h2 id="le-modèle-ip">Le modèle IP</h2>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/E1vPPQyQ_NM" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devriez être capable de répondre aux questions suivantes :</p>
+
+<ul>
+  <li>expliquez ce qu’est une couche et en quoi consiste l’encapsulation</li>
+  <li>citez les 5 couches du module IP</li>
+  <li>quel est l’intérêt de travailler avec un modèle en couche ?</li>
+</ul>
+
+<h2 id="couche-matérielle">Couche matérielle</h2>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/lYMeFS7a_6g" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devriez être capable de répondre aux questions suivantes :</p>
+<ul>
+  <li>qu’est-ce qu’un concentrateur (hub) ?</li>
+  <li>comment peut-on vérifier que votre carte réseau est bien branchée ?</li>
+</ul>
+
+<h1 id="couche-liaison--ethernet-et-arp">Couche liaison : Ethernet et ARP</h1>
+<p>Dans cette série de vidéo, vous apprendrez à :</p>
+<ul>
+  <li>Décrire le fonctionnement du protocole éthernet</li>
+  <li>Etre capable d’identifier les champs d’un en-tête ethernet à partir d’une trame</li>
+  <li>Décrire le fonctionnement du protocole ARP</li>
+</ul>
+
+<h2 id="la-couche-éthernet">La couche éthernet</h2>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/HKLQsinEUp4" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devriez être capable de répondre aux questions suivantes :</p>
+<ul>
+  <li>sur combien d’octets (et sur combien de bits) est codée une adresse ethernet ?</li>
+  <li>comment les adresses ethernet sont elles attribuées ?</li>
+  <li>deux cartes éthernet peuvent elles avoir la même adresse ethernet ?</li>
+  <li>que se passe-t-il lorsque deux cartes réseau tentent d’émettre en même temps sur le même support physique ? expliquez le principe de CSMA/CD</li>
+  <li>quelle est la différence entre un concentrateur (hub) et un commutateur (switch) ?</li>
+</ul>
+
+<h2 id="arp">ARP</h2>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/qHmP82fn5Ss" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devriez être capable de répondre aux questions suivantes :</p>
+<ul>
+  <li>les adresses IP sont elles attribuées de la même façon que les adresses ethernet ?</li>
+  <li>expliquez le principe de résolution ARP </li>
+</ul>
+
+<h1 id="adressage-ip">Adressage IP</h1>
+<p>Dans cette série de vidéos, vous apprendrez à :
+Au niveau “théorique”</p>
+<ul>
+  <li>représenter un schéma réseau logique et l’annoter avec les adresses réseaux, les adresses des machines.</li>
+  <li>représenter un schéma matériel en identifiant les éléments réseaux suivants : câbles, panneau de brassage, hub, switch, machine. Etre capable de décrire les fonctions de chacun de ces derniers.</li>
+  <li>diviser une plage réseaux en sous-réseaux en fonction des contraintes demandées (plage initiale, nombre de réseaux, nombre de machines par réseaux) en spécifiant et en calculant les masques, les CIDR, les adresses de diffusion, les adresses réseau.</li>
+  <li>Au niveau “pratique”</li>
+  <li>identifier et comprendre le fonctionnement des panneaux de brassage, hub et switch. Savoir les brancher.</li>
+  <li>identifier les interfaces réseaux de sa machine, associer une adresse IP à une interface réseau, tester la connectivité sur un lien local</li>
+  <li>expliquer le mécanisme ARP à l’aide de l’affichage de la table ARP au fur et à mesure des nouvelles résolution ethernet-ip</li>
+  <li>lancer la sonde wireshark pour intercepter des paquets et savoir utiliser les 3 parties (liste des trames interceptées, décomposition de la structure de la trame sélectionnée, trame en hexadécimale) de la fenêtre wireshark</li>
+</ul>
+
+<h2 id="calculs-dadressage">Calculs d’adressage</h2>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/QbQ07RdnCHE" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devriez être capable de répondre aux questions suivantes :</p>
+<ul>
+  <li>expliquez comment convertir un CIDR en masque réseau et vice-versa</li>
+  <li>expliquez comment obtenir à partir d’une adresse réseau et d’un masque :</li>
+  <li>l’adresse de diffusion</li>
+  <li>la plage des adresses disponibles</li>
+  <li>expliquez comment découper une plage réseau en n sous-réseau</li>
+</ul>
+
+<h2 id="routage">Routage</h2>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/tuzU6wJzXBw" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devriez être capable de répondre aux questions suivantes :</p>
+<ul>
+  <li>expliquez ce qu’est un routeur</li>
+  <li>expliquez la différence entre un concentrateur (hub), un commutateur (switch) et un routeur (router)</li>
+  <li>si une trame réseau veut aller de l’adresse IP (A) vers l’adresse IP (B) en traversant un routeur R, que se passe-t-il au niveau éthernet ? et au niveau IP ?</li>
+</ul>
+
+<h2 id="table-de-routage">Table de routage</h2>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/WVnfiZItbSo" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devriez être capable de répondre aux questions suivantes :</p>
+<ul>
+  <li>qu’est-ce que l’adresse de routage par défaut ? </li>
+  <li>les réseaux reliés physiquement aux interfaces du routeur doivent ils figurer dans la table de routage ?</li>
+  <li>expliquez ce qu’est le supernetting (aggrégation de réseaux) et dans quel cas et comment le réaliser.</li>
+</ul>
+
+<h2 id="exemple-de-conception-réseaux">Exemple de conception réseaux</h2>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/_FJLAWoWGrg" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devriez être capable de répondre aux questions suivantes :</p>
+<ul>
+  <li>à partir d’une infrastructure réseau et d’une plage réseau donnée (par une adresse + un masque ou un CIDR), expliquez comment :</li>
+  <li>dessiner le schéma logique</li>
+  <li>dessiner le schéma matériel (ou schéma physique)</li>
+  <li>découper et identifier les sous-réseaux</li>
+  <li>adresser les machines (hôtes + routeurs) sur chacune des plages</li>
+  <li>écrire la table de routage pour chacun des hôtes et chacun des routeurs</li>
+</ul>
+
+<h1 id="couche-transport--icmp-udp-et-tcp">Couche transport : ICMP, UDP et TCP</h1>
+
+<h2 id="encapsulation-des-protocoles">Encapsulation des protocoles</h2>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/rEhmfaodBdQ" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devriez être capable de répondre aux questions suivantes :</p>
+<ul>
+  <li>à partir d’une trame donnée, identifier l’adresse ethernet source, l’adresse ethernet destination, si c’est un datagramme IP qui est transporté</li>
+</ul>
+
+<h2 id="protocole-ip">Protocole IP</h2>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/Rb2ZM9fP9a0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devriez être capable de répondre aux questions suivantes :</p>
+<ul>
+  <li>à partir d’un datagramme donné et encapsulant le protocole IP, être capable d’identifier l’adresse IP source, l’adresse IP destination, le type du protocole transporté (TCP, UDP, ICMP)</li>
+  <li>décrire le principe de fragmentation</li>
+</ul>
+
+<h2 id="protocole-icmp">Protocole ICMP</h2>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/PYCXASXyrIE" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devriez être capable de répondre aux questions suivantes :</p>
+<ul>
+  <li>à partir d’un datagramme encapsulant le protocole ICMP, identifiez le type et le code de message ICMP</li>
+  <li>expliquez le fonctionnement de la commande ping et décrivez les messages ICMP  échangés lors d’un “ping” d’une machine A vers une machine B</li>
+  <li>expliquez le fonctionnement de la commande traceroute (ou tracert sous windows)  et décrivez les messages ICMP  échangés lors d’un “traceroute” d’une machine A vers une machine B</li>
+</ul>
+
+<h2 id="protocole-udp">Protocole UDP</h2>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/PrsjyCxvt74" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devriez être capable de répondre aux questions suivantes :</p>
+<ul>
+  <li>à partir d’un datagramme IP encapsulant un message UDP, identifiez le port UDP source et le port UDP destination</li>
+  <li>citez au moins 2 protocoles applicatifs basés sur UDP</li>
+  <li>énumérez les avantages et les inconvénients du protocole UDP</li>
+</ul>
+
+<h2 id="protocole-tcp">Protocole TCP</h2>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/IBPKv2y0I4U" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devriez être capable de répondre aux questions suivantes :</p>
+<ul>
+  <li>à partir d’un datagramme IP encapsulant un message TCP, identifiez le port TCP source et le port TCP destination</li>
+</ul>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/7SNdUqjCjys" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devriez être capable de répondre aux questions suivantes :</p>
+<ul>
+  <li>qu’est ce qu’une fenêtre glissante ?</li>
+</ul>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/uHAnH9PrUqk" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devriez être capable de répondre aux questions suivantes :</p>
+<ul>
+  <li>énumérez les avantages et les inconvénients du protocole TCP</li>
+  <li>quelles sont les trois phases d’une ouverture de connexion TCP ?</li>
+  <li>quelles sont les quatre phases d’une fermeture de connexion TCP ?</li>
+</ul>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags : </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#adressage-ip" class="page__taxonomy-item" rel="tag">adressage IP</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#adresses-ip" class="page__taxonomy-item" rel="tag">adresses IP</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#arp" class="page__taxonomy-item" rel="tag">ARP</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#ethernet" class="page__taxonomy-item" rel="tag">ethernet</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#ip" class="page__taxonomy-item" rel="tag">IP</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#mod%C3%A8le-ip" class="page__taxonomy-item" rel="tag">modèle IP</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#routage" class="page__taxonomy-item" rel="tag">routage</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#r%C3%A9seaux" class="page__taxonomy-item" rel="tag">réseaux</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#table-de-routage" class="page__taxonomy-item" rel="tag">table de routage</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Catégories : </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#informatique" class="page__taxonomy-item" rel="tag">informatique</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/categories/#r%C3%A9seaux" class="page__taxonomy-item" rel="tag">réseaux</a>
+    
+    </span>
+  </p>
+
+
+        
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Partager sur</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=dntt&text=Couches+et+protocoles+IP%20http%3A%2F%2Flocalhost%3A4000%2Finformatique%2F2.reseaux%2F1.introduction_aux_reseaux%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Partager sur Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Finformatique%2F2.reseaux%2F1.introduction_aux_reseaux%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Partager sur Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Finformatique%2F2.reseaux%2F1.introduction_aux_reseaux%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Partager sur LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/informatique/1.pensee_informatique/" class="pagination--pager" title="Pensée Informatique
+">Précédent</a>
+    
+    
+      <a href="/informatique/2.reseaux/2.service_dns/" class="pagination--pager" title="Les serveurs de noms : les DNS
+">Suivant</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Contact</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://www.linkedin.com/in/tuyet-tram-dang-ngoc-0870146/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/dntt" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://www.facebook.com/tuyettram.dangngoc" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+        
+      
+        
+          <li><a href="https://github.com/dntt" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Flux</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 Tuyêt Trâm DANG NGOC. Propulsé par <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

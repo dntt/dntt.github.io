@@ -1,0 +1,679 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="fr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Introduction à la programmation C -  DNTT</title>
+<meta name="description" content="Supports programmation C">
+
+
+  <meta name="author" content="Tuyêt Trâm DANG NGOC">
+  
+  <meta property="article:author" content="Tuyêt Trâm DANG NGOC">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="DNTT">
+<meta property="og:title" content="Introduction à la programmation C">
+<meta property="og:url" content="http://localhost:4000/informatique/6.programmation_C/">
+
+
+  <meta property="og:description" content="Supports programmation C">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/informatique/fond/fond_prog.png">
+
+
+
+  <meta name="twitter:site" content="@dntt">
+  <meta name="twitter:title" content="Introduction à la programmation C">
+  <meta name="twitter:description" content="Supports programmation C">
+  <meta name="twitter:url" content="http://localhost:4000/informatique/6.programmation_C/">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="http://localhost:4000/informatique/fond/fond_prog.png">
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2021-01-08T13:01:57+01:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/informatique/6.programmation_C/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Tuyêt Trâm DANG NGOC",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="DNTT Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/logo.png" alt=""></a>
+        
+        <a class="site-title" href="/">
+          DNTT
+          <span class="site-subtitle">Pédagogie, Informatique & Systèmes</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/apropos/">À propos</a>
+            </li><li class="masthead__menu-item">
+              <a href="/informatique/">Informatique</a>
+            </li><li class="masthead__menu-item">
+              <a href="/pedagogie/">Pédagogie</a>
+            </li><li class="masthead__menu-item">
+              <a href="/systeme/">Intelligence collective</a>
+            </li><li class="masthead__menu-item">
+              <a href="/portfolio/">Mon portfolio</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero"
+  style=" background-image: url('');"
+>
+  
+    <img src="/informatique/fond/fond_prog.png" alt="Introduction à la programmation C" class="page__hero-image">
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+        <img src="/informatique/icones/programmer.png"
+             alt="Programmer">
+      
+      <h3>Présentation</h3>
+      
+      
+    
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Introduction à la programmation C">
+    <meta itemprop="description" content="Supports programmation C">
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Introduction à la programmation C
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h1 id="introduction-au-langage-c---types-et-variables">Introduction au langage C - types et variables</h1>
+<p>Objectifs :</p>
+<ul>
+  <li>expliquer brièvement le rôle d’un compilateur</li>
+  <li>écrire un programme en C à l’aide d’un éditeur de texte et le compiler avec gcc en ligne de commande</li>
+  <li>faire afficher à l’écran une chaine de caractères (= une petite phrase)</li>
+  <li>déclarer une variable de type entier ou une variable de type décimal</li>
+  <li>faire afficher à l’écran la valeur d’une ou plusieurs variables entières ou décimales au sein d’une chaine de caractères</li>
+  <li>récupérer dans une variable un nombre entier saisi par l’utilisateur au clavier</li>
+  <li>récupérer dans une variable un nombre décimal saisi par l’utilisateur au clavier</li>
+  <li>permuter les valeurs de deux variables de même type</li>
+</ul>
+
+<h2 id="quest-ce-que-programmer">Qu’est ce que programmer ?</h2>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/d9Yn1uGF8Dk" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devriez être capable de répondre aux questions suivantes :</p>
+
+<ul>
+  <li>qu’est ce qu’un algorithme ?</li>
+  <li>que veut dire compiler ?</li>
+  <li>pourquoi ne peut on pas compiler un programme écrit en langage C avec un compilateur Java ?</li>
+  <li>lorsqu’un exécutable a été généré par le compilateur, doit on le recompiler à chaque fois avant de l’exécuter ?</li>
+</ul>
+
+<h2 id="editer-son-programme-le-compiler-et-lexécuter">Editer son programme le compiler et l’exécuter</h2>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/wN9jWRCIVJo" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devriez être capable de répondre aux questions suivantes :</p>
+
+<ul>
+  <li>quelle extension utilise-t-on usuellement pour nommer les programmes écrits en langage C ?</li>
+  <li>que dois-je taper comme commande pour compiler mon programme écrit en C ?</li>
+  <li>j’ai fait une erreur de syntaxe dans mon programme. Aurais-je un problème à la compilation ou à l’exécution ?</li>
+  <li>sitôt mon programme corrigé, que dois-je faire pour vérifier que tout fonctionne correctement ?</li>
+</ul>
+
+<h2 id="variables">Variables</h2>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/EZ_kVTN3knQ" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devriez être capable de répondre aux questions suivantes :</p>
+
+<ul>
+  <li>expliquez la différence entre déclarer une variable, initialiser une variable et affecter une valeur à une variable</li>
+  <li>associer les types : entiers, réel et caractère et leur syntaxe en langage C : int, float, et char</li>
+  <li>je suis capable de répondre à n’importe quel type d’exercice sur des affectations de variables comme celui présenté dans la vidéo</li>
+  <li>je sais échanger la valeur de deux variables x et y (dernière question de la vidéo)</li>
+</ul>
+
+<h2 id="affichage-avec-printf">Affichage avec printf</h2>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/EHc0RJKwDR8" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devriez être capable de répondre aux questions suivantes :</p>
+
+<ul>
+  <li>que devez-vous écrire dans votre programme pour afficher les valeurs de x, y et z qui sont respectivement déclarés comme entier, flottant et entier ?</li>
+  <li>comment faire pour paser à la ligne dans l’affichage ?</li>
+</ul>
+
+<h2 id="saisie-avec-scanf">Saisie avec scanf</h2>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/MtObJQMkDj4" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devriez être capable de répondre aux questions suivantes :</p>
+
+<ul>
+  <li>que devez-vous écrire dans votre programme pour  réel tapé par l’utilisateur au clavier et le stocker dans une variable nommée x ?</li>
+</ul>
+
+<h1 id="structure-de-contrôle--ifthenelse--switch">Structure de contrôle : if…then…else / switch</h1>
+<p>Objectifs :</p>
+<ul>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>exprimer une condition booléenne à l’aide des opérateurs de comparaison &lt;, &gt;, &lt;=, &gt;=, ==, != et des opérateurs booléens &amp;&amp;,</td>
+          <td> </td>
+          <td>, !</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>réaliser une série d’instructions si le résultat de l’évaluation de la condition est vérifié, ceci à l’aide du mot-clef if</li>
+  <li>réaliser une série d’instructions si le résultat de l’évaluation de la condition est vérifié, ou une autre série d’instructions dans le cas contraire, à l’aide des mot-clefs if et else</li>
+  <li>enchainer des conditions à l’aide de if, else if…, else.</li>
+  <li>utiliser la structure switch…case…default afin de réaliser différentes séries d’instructions suivant la valeur prise par une variable donnée</li>
+  <li>écrire un programme C bien indenté</li>
+</ul>
+
+<h2 id="structure-de-contrôle-ifelse">Structure de contrôle : if…else</h2>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/Sw-fVyqObH8" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devriez être capable de répondre aux questions suivantes :</p>
+
+<p>que devez-vous écrire dans votre programme pour  afficher “positif” si la valeur saisie par l’utilisateur est positive et “négatif” si celle-ci est négative ?</p>
+
+<h2 id="pourquoi-et-comment-indenter-son-programmer">Pourquoi et comment indenter son programmer</h2>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/z7fePBctjWQ" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devriez être capable de répondre aux questions suivantes :</p>
+
+<ul>
+  <li>que veut dire indenter son programme ?</li>
+  <li>citez au moins 3 raisons qui rendent nécessaire l’indentation d’un programme informatique</li>
+</ul>
+
+<h2 id="structure-conditionnelle-switchcase">Structure conditionnelle : switch…case</h2>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/xOR8ZL1MRsc" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devriez être capable de répondre aux questions suivantes :</p>
+
+<p>peut on transformer toute structure de controle if..else en structure switch…case ? si oui, comment ? si non, dans quel cas cela ne peut pas se faire  ?</p>
+
+<h1 id="fonctions">Fonctions</h1>
+<p>Objectifs :</p>
+<ul>
+  <li>écrire le prototype d’une fonction avec le type de ses arguments et de sa valeur de retour</li>
+  <li>écrire l’implémentation de la fonction</li>
+  <li>appeler une fonction depuis une autre fonction, y compris depuis la fonction principale main</li>
+  <li>utiliser la valeur de retour d’une fonction</li>
+  <li>expliquer la différence entre une fonction et une procédure</li>
+  <li>savoir à tout instant du programme (dans une fonction appelante ou appelée), la valeur contenue par une variable donnée</li>
+</ul>
+
+<h2 id="fonctions-12">Fonctions (1/2)</h2>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/05ryvHW16Qs" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devriez être capable de répondre aux questions suivantes :</p>
+<ul>
+  <li>expliquez quel est l’utilité des fonctions dans un programme informatique ?</li>
+</ul>
+
+<h2 id="fonctions-22-récapitulatif">Fonctions (2/2) : récapitulatif</h2>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/V1Gy6Uc5XoA" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devriez être capable de répondre aux questions suivantes :</p>
+<ul>
+  <li>quelle est la différence entre procédure et fonction ?</li>
+</ul>
+
+<h2 id="portée-de-variables">Portée de variables</h2>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/5OjNh4_n-jI" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devriez être capable de répondre aux questions suivantes :</p>
+<ul>
+  <li>expliquez ce qu’il advient d’une variable par exemple (la variable entière x contenant la valeur 3) passée en paramètre à une fonction. Est-elle modifiée par la fonction ?</li>
+</ul>
+
+<h1 id="structure-de-boucle--while--dowhile">Structure de boucle : while / do…while</h1>
+<p>Objectifs :</p>
+<ul>
+  <li>utiliser la boucle while pour exécuter une série d’instructions tant qu’une condition est vérifiée</li>
+  <li>utiliser la boucle do…while pour exécuter une série d’instructions jusqu’à ce qu’une condition soit vérifiée</li>
+  <li>expliquer la différence entre une boucle while et une boucle do…while</li>
+</ul>
+
+<h2 id="structure-de-boucle-while">Structure de boucle : while</h2>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/lcNexREyX_w" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devriez être capable de répondre aux questions suivantes :</p>
+<ul>
+  <li>comment écririez-vous avec la structure de contrôle while, une boucle qui compte de un en un à partir de zéro et ceci jusqu’à 100 (0, 1, 2, 3, …, 99, 100) ?</li>
+  <li>comment modifieriez-vous ce programme pour qu’il ne s’arrête plus à 100, mais qu’il continue à compter indéfiniment ?</li>
+  <li>comment arrêteriez-vous ce programme qui est effectivement parti pour compter indéfiniment ?</li>
+</ul>
+
+<h2 id="structure-de-boucle--dowhile">Structure de boucle : do…while</h2>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/FweEjLp6ogM" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devriez être capable de répondre aux questions suivantes :</p>
+<ul>
+  <li>comment écririez-vous avec la structure de contrôle do…while, une boucle qui compte de un en un à partir de zéro et ceci jusqu’à 100 (0, 1, 2, 3, …, 99, 100) ?</li>
+  <li>par rapport au même exercice avec le while, pouvez-vous expliquer quelles lignes de code a-t-il été nécessaire de changer et pourquoi ?</li>
+</ul>
+
+<h1 id="structure-de-boucle--for">Structure de boucle : for</h1>
+<p>Objectifs :</p>
+<ul>
+  <li>réaliser une série d’instruction exactement N fois à l’aide d’une boucle for</li>
+  <li>utiliser la variable d’indice de la boucle for à l’intérieur des instructions de ma boucle</li>
+  <li>imbriquer une boucle for dans une autre boucle for pour réaliser des séries d’instructions</li>
+</ul>
+
+<h2 id="structure-de-boucle--for-12">Structure de boucle : for (1/2)</h2>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/aff_Lqu6mu0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devriez être capable de répondre aux questions suivantes :</p>
+<ul>
+  <li>comment écririez-vous avec la structure de contrôle for, une boucle qui compte de un en un à partir de zéro et ceci jusqu’à 100 (0, 1, 2, 3, …, 99, 100) ?</li>
+  <li>par rapport au même exercice avec le while, pouvez-vous expliquer quelles lignes de code ont été nécessaire de changer et pourquoi ?</li>
+</ul>
+
+<h2 id="structure-de-boucle--for-22--boucles-imbriquées">Structure de boucle : for (2/2) – boucles imbriquées</h2>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/aHPaF2mO_PE" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devriez être capable de répondre aux questions suivantes :</p>
+<ul>
+  <li>donnez trois raisons qui rendent nécessaire l’indentation de votre programme</li>
+  <li>sauriez-vous écrire un programme qui pour chacune des années entre 1999 et 2017, affiche le numéro de chaque mois ? (année 1999 : mois 1, mois 2, … mois 11, mois 12,
+année 2000 : mois 1, mois 2, … mois 11, mois 12, 
+…
+année 2017 : mois 1, mois 2, … mois 11, mois 12)</li>
+</ul>
+
+<h1 id="tableaux">Tableaux</h1>
+<p>Objectifs :</p>
+<ul>
+  <li>déclarer un tableau de n cases exactement</li>
+  <li>accéder à la case du tableau pour en afficher le contenu ou modifier sa valeur</li>
+  <li>parcourir successivement toutes les cases du tableau pour y réaliser des actions (en afficher les valeurs ou y placer des valeurs précises)</li>
+</ul>
+
+<h2 id="tableaux-à-1-dimension">Tableaux à 1 dimension</h2>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/8UPtYi8f0DE" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devriez être capable de répondre aux questions suivantes :</p>
+<ul>
+  <li>que devez-vous écrire dans votre programme pour déclarer un tableau de 10 entiers ?</li>
+  <li>comment mettre la valeur 3 dans la 5ème case du tableau ?</li>
+  <li>comment afficher la valeur de la 2ème case du tableau ?</li>
+  <li>que se passe-t-il si j’essaye d’afficher la 11ème case du tableau ?</li>
+</ul>
+
+<h2 id="tableaux-dans-les-fonctions">Tableaux dans les fonctions</h2>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/6eX9_XzdXOY" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devriez être capable de répondre aux questions suivantes :</p>
+<ul>
+  <li>comment écrire une fonction qui initialise toutes les cases à la valeur 3 d’un tableau de 10 entiers passé en paramètre ?</li>
+</ul>
+
+<h1 id="tableaux-à-2-dimensions">Tableaux à 2 dimensions</h1>
+<p>Objectifs :</p>
+<ul>
+  <li>déclarer un tableau de mxn cases exactement</li>
+  <li>accéder à la case du tableau pour en afficher le contenu ou modifier sa valeur</li>
+  <li>parcourir successivement toutes les cases du tableau pour y réaliser des actions (en afficher les valeurs ou y placer des valeurs précises)</li>
+</ul>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/vvFZ4aBDXF8" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devriez être capable de répondre aux questions suivantes :</p>
+
+<ul>
+  <li>que devez-vous écrire dans votre programme pour déclarer un tableau de deux dimensions de 10x20 entiers ?</li>
+  <li>comment mettre la valeur 3 dans la case correspondant aux coordonnées (3, 6) du tableau ?</li>
+  <li>comment afficher la valeur de la case (2, 1) du tableau ?</li>
+  <li>comment écrire une fonction qui initialise toutes les cases à la valeur 3 d’un tableau de 10x20 entiers passé en paramètre ?</li>
+</ul>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Partager sur</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=dntt&text=Introduction+%C3%A0+la+programmation+C%20http%3A%2F%2Flocalhost%3A4000%2Finformatique%2F6.programmation_C%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Partager sur Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Finformatique%2F6.programmation_C%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Partager sur Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Finformatique%2F6.programmation_C%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Partager sur LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/informatique/5.cryptographie_appliquee/" class="pagination--pager" title="Cryptographie appliquée
+">Précédent</a>
+    
+    
+      <a href="/informatique/7.administration-systeme/" class="pagination--pager" title="Administration système
+">Suivant</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Contact</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://www.linkedin.com/in/tuyet-tram-dang-ngoc-0870146/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/dntt" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://www.facebook.com/tuyettram.dangngoc" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+        
+      
+        
+          <li><a href="https://github.com/dntt" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Flux</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 Tuyêt Trâm DANG NGOC. Propulsé par <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

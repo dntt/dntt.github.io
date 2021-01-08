@@ -1,0 +1,490 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="fr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Compilation séparée, Makefile et débogage  -  DNTT</title>
+<meta name="description" content="Les étapes de la compilation, écrire un Makefile et débogguer">
+
+
+  <meta name="author" content="Tuyêt Trâm DANG NGOC">
+  
+  <meta property="article:author" content="Tuyêt Trâm DANG NGOC">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="DNTT">
+<meta property="og:title" content="Compilation séparée, Makefile et débogage">
+<meta property="og:url" content="http://localhost:4000/informatique/3.systeme/4.compilation/">
+
+
+  <meta property="og:description" content="Les étapes de la compilation, écrire un Makefile et débogguer">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/informatique/fond/fond_systeme.png">
+
+
+
+  <meta name="twitter:site" content="@dntt">
+  <meta name="twitter:title" content="Compilation séparée, Makefile et débogage">
+  <meta name="twitter:description" content="Les étapes de la compilation, écrire un Makefile et débogguer">
+  <meta name="twitter:url" content="http://localhost:4000/informatique/3.systeme/4.compilation/">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="http://localhost:4000/informatique/fond/fond_systeme.png">
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2021-01-08T13:01:57+01:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/informatique/3.systeme/4.compilation/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Tuyêt Trâm DANG NGOC",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="DNTT Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/logo.png" alt=""></a>
+        
+        <a class="site-title" href="/">
+          DNTT
+          <span class="site-subtitle">Pédagogie, Informatique & Systèmes</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/apropos/">À propos</a>
+            </li><li class="masthead__menu-item">
+              <a href="/informatique/">Informatique</a>
+            </li><li class="masthead__menu-item">
+              <a href="/pedagogie/">Pédagogie</a>
+            </li><li class="masthead__menu-item">
+              <a href="/systeme/">Intelligence collective</a>
+            </li><li class="masthead__menu-item">
+              <a href="/portfolio/">Mon portfolio</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero"
+  style=" background-image: url('');"
+>
+  
+    <img src="/informatique/fond/fond_systeme.png" alt="Compilation séparée, Makefile et débogage" class="page__hero-image">
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+        <img src="/informatique/icones/compilation.png"
+             alt="Compilation">
+      
+      <h3>Présentation</h3>
+      
+      
+    
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Compilation séparée, Makefile et débogage">
+    <meta itemprop="description" content="Les étapes de la compilation, écrire un Makefile et débogguer">
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Compilation séparée, Makefile et débogage
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h1 id="compilation-séparée">Compilation séparée</h1>
+<p>Dans cette série de vidéo, vous apprendrez à :</p>
+<ul>
+  <li>énoncer les différentes étapes de la compilation : pré-processing, compilation, assemblage, edition de liens et expliquer le rôle de chacune des étapes</li>
+  <li>utiliser gcc -c pour générer un fichier objet</li>
+  <li>utiliser gcc -o pour générer un exécutable</li>
+  <li>séparer et utiliser correctement les fichiers d’en-tête .h</li>
+  <li>donner les différences entre une bibliothèque statique et une bibliothèque dynamique, savoir les générer et les utiliser</li>
+</ul>
+
+<h2 id="etapes-de-la-compilation">Etapes de la compilation</h2>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/l1U_LNwHz3I" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devez être  en mesure de :</p>
+
+<ul>
+  <li>citer les différentes étapes de la compilation en les nommant, en expliquant à quoi elle sert et en  définissant les fichiers (lesquels, de quel type) est utilisé dans cette étape en entrée et en sortie</li>
+</ul>
+
+<h2 id="compilation-séparée-partie-12--pré-traitement">Compilation séparée (partie 1/2) : pré-traitement</h2>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/pSo1YocutVc" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devez être  en mesure de :</p>
+
+<ul>
+  <li>définir ce que fait le préprocesseur</li>
+  <li>citer les instructions de préprocesseur et expliquer comment elles sont utilisées</li>
+  <li>expliquer ce qu’est un fichier d’en-tête et comment le compilateur C les retrouve</li>
+</ul>
+
+<h2 id="compilation-séparée-partie-22--édition-de-liens">Compilation séparée (partie 2/2) : édition de liens</h2>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/VZGxeO8Msdw" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devez être  en mesure de :</p>
+
+<ul>
+  <li>Expliquer ce que fait l’éditeur de lien</li>
+  <li>Savoir générer un exécutable à partir de plusieurs fichiers objets</li>
+</ul>
+
+<h2 id="bibliothèques">Bibliothèques</h2>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/_6LYwRD4wD0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devez être  en mesure de :</p>
+
+<ul>
+  <li>Expliquer ce qu’est une bibliothèque statique et énumérer ses principaux avantages et inconvénients</li>
+  <li>Créer une bibliothèque statique</li>
+  <li>Expliquer ce qu’est une bibliothèque dynamiques et énumérer ses principaux avantages et inconvénients</li>
+  <li>Créer une bibliothèque dynamique</li>
+  <li>Compiler un programme en utilisant une bibliothèque statique</li>
+  <li>Compiler un programme en utilisant une bibliothèque dynamique</li>
+</ul>
+
+<h2 id="makefile">Makefile</h2>
+<p>Dans cette série de vidéo, vous apprendrez à :</p>
+<ul>
+  <li>dessiner un graphe de dépendance entre les fichiers sources .c, les fichiers d’en-têtes .h et les bibliothèques</li>
+  <li>écrire un Makefile à partir de fichiers .c, .h et de bibliothèques</li>
+  <li>décrire l’exécution du Makefile en fonction des fichiers modifiés</li>
+  <li>expliquer ce qu’est un déboggueur</li>
+  <li>compiler avec les options de débogage</li>
+  <li>utiliser le débogueur ddd</li>
+</ul>
+
+<h1 id="dépendance-entre-fichiers">Dépendance entre fichiers</h1>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/9yZai8dmaZc" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devez être  en mesure de :</p>
+
+<ul>
+  <li>identifier les dépendances nécessaires pour compiler un fichier et pour générer l’exécutable pour en établir le graphe de dépendance</li>
+</ul>
+
+<h2 id="makefile-1">Makefile</h2>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/KAPgHBkSZbw" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devez être  en mesure de :</p>
+
+<ul>
+  <li>Ecrire un Makefile à partir d’un graphe de dépendance</li>
+  <li>Lire un Makefile et pouvoir en déduire les dépendances entre les fichiers et les actions pour générer ces fichiers</li>
+  <li>Expliquer l’utilité des cibles all et clean</li>
+</ul>
+
+<h1 id="débogage">Débogage</h1>
+<p>Dans cette série de vidéo, vous apprendrez à :</p>
+<ul>
+  <li>Expliquer ce qu’est un déboggueur</li>
+  <li>Expliquer comment utiliser un débogueur comme gdb et ddd</li>
+</ul>
+
+<h2 id="débogage-principe-et-utilisation-de-gdb">Débogage (principe et utilisation de gdb)</h2>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/9Hdj39rCiLM" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devez être  en mesure de :</p>
+
+<ul>
+  <li>Expliquer ce qu’est un déboggueur</li>
+  <li>Compiler avec les options de débogage</li>
+</ul>
+
+<h1 id="débogage-utilisation-de-ddd">Débogage (utilisation de ddd)</h1>
+
+<!-- Courtesy of embedresponsively.com //-->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/PQBMc5KJP54" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<p>Après avoir vu cette vidéo, vous devez être  en mesure de :</p>
+
+<ul>
+  <li>utiliser ddd</li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Partager sur</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=dntt&text=Compilation+s%C3%A9par%C3%A9e%2C+Makefile+et+d%C3%A9bogage+%20http%3A%2F%2Flocalhost%3A4000%2Finformatique%2F3.systeme%2F4.compilation%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Partager sur Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Finformatique%2F3.systeme%2F4.compilation%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Partager sur Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Finformatique%2F3.systeme%2F4.compilation%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Partager sur LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/informatique/3.systeme/3.programmation_commande/" class="pagination--pager" title="Programmation de commandes
+">Précédent</a>
+    
+    
+      <a href="/informatique/4.base_de_donnees/" class="pagination--pager" title="Bases de données
+">Suivant</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Contact</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://www.linkedin.com/in/tuyet-tram-dang-ngoc-0870146/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/dntt" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://www.facebook.com/tuyettram.dangngoc" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+        
+      
+        
+          <li><a href="https://github.com/dntt" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Flux</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 Tuyêt Trâm DANG NGOC. Propulsé par <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
