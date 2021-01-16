@@ -166,4 +166,10 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/festival-en/",
         "teaser": "http://localhost:4000/assets/images/page-cover.png"
+      },{
+        "title": "Gamifier pour engager",
+        "excerpt":"Faire découvrir un thème, une cause, une discipline ? Faire réfléchir sur une problématique ? Engager les personnes sur un sujet ? ET ceci, tout en faisant passer un bon moment et en poussant les gens à se surpasser ? Découvrez les principes de la ludification/gamification ! Pendant le #FestivalDeLApprendre,...","categories": ["Pedagogie"],
+        "tags": ["Festival de l'apprendre","gamification","ludification","intelligence collective"],
+        "url": "http://localhost:4000/pedagogie/atelier-gamification/",
+        "teaser": "http://localhost:4000/assets/images/page-cover.png"
       },]
