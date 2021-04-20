@@ -138,7 +138,7 @@ var store = [{
         "teaser": "http://localhost:4000/pedagogie/BD/classe-inversee/couverture.png"
       },{
         "title": "Débat scientifique",
-        "excerpt":"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Cliquez sur une page pour feuilleter la BD.       ","categories": [],
+        "excerpt":"                                                                                                                                                                                                                                                                                                                                                                                                                                              Cliquez sur une page pour feuilleter la BD.       ","categories": [],
         "tags": [],
         "url": "http://localhost:4000/pedagogie/6.BD-debat-scientifique/",
         "teaser": "http://localhost:4000/pedagogie/BD/debat-scientifique/couverture.png"
