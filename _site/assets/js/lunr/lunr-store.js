@@ -107,6 +107,12 @@ var store = [{
         "url": "http://localhost:4000/pedagogie/1.BD-introduction/",
         "teaser": "http://localhost:4000/pedagogie/BD/introduction/couverture.png"
       },{
+        "title": "Approche par Compétences (APC)",
+        "excerpt":"-&gt; Cliquez sur une page pour feuilleter la BD. Références Jonnaert, P. (2017). La notion de compétence : Une réflexion toujours inachevée. Éthique publique. Revue internationale d’éthique sociétale et gouvernementale, vol. 19, n° 1, Article 19, n° 1. https://doi.org/10.4000/ethiquepublique.2932 Nguyen, D.-Q., &amp; Blais, J.-G. (2007). Approche par objectifs ou approche par...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/pedagogie/10.BD-apc/",
+        "teaser": "http://localhost:4000/pedagogie/BD/apc/couverture.png"
+      },{
         "title": "Alignement constructif",
         "excerpt":"Cliquez sur une page pour feuilleter la BD. Références Biggs, J. (1996). Enhancing teaching through constructive alignment. Higher education, 32(3), 347-364. Bloom, B. S., Krathwohl, D. R., &amp; Masia, B. B. (1984). Bloom taxonomy of educational objectives. In Allyn and Bacon. Pearson Education. Wiggins, G., Wiggins, G. P., &amp; McTighe,...","categories": [],
         "tags": [],
