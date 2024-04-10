@@ -9,7 +9,7 @@ header:
 
 # Ce qui me définit aujourd’hui ?
 
-![styled-image](/assets/images/bio.png "Ma bio"){: .align-center style="width: 5%;"}
+![styled-image](/assets/images/bio.png "Ma bio"){: .align-center style="width: 100%;"}
 
 
 - une réflexion sur la pédagogie
