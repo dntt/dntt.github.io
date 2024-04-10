@@ -9,6 +9,9 @@ header:
 
 # Ce qui me définit aujourd’hui ?
 
+![styled-image](/assets/images/bio.png "Ma bio"){: .align-center style="width: 5%;"}
+
+
 - une réflexion sur la pédagogie
 
 - l'enseignement de l'informatique, en particulier des réseaux et des systèmes
