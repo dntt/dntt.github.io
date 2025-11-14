@@ -3,16 +3,16 @@ title: "The Learning Festival 2021"
 excerpt: "The learning festival will be held around january, 24, 2021. Let's learn together !"
 gallery:
   - url: /pedagogie/BD/festival_apprendre_2021/en/page-01.png
-    image_path: /pedagogie/BD/festival_apprendre_2021/th-page-01.png
+    image_path: /pedagogie/BD/festival_apprendre_2021/e/th-page-01.png
     alt: "Page 1"
   - url: /pedagogie/BD/festival_apprendre_2021/en/page-02.png
-    image_path: /pedagogie/BD/festival_apprendre_2021/th-page-02.png
+    image_path: /pedagogie/BD/festival_apprendre_2021/en/th-page-02.png
     alt: "Page 2"
   - url: /pedagogie/BD/festival_apprendre_2021/en/page-03.png
-    image_path: /pedagogie/BD/festival_apprendre_2021/th-page-03.png
+    image_path: /pedagogie/BD/festival_apprendre_2021/en/th-page-03.png
     alt: "Page 3"
   - url: /pedagogie/BD/festival_apprendre_2021/en/page-04.png
-    image_path: /pedagogie/BD/festival_apprendre_2021/th-page-04.png
+    image_path: /pedagogie/BD/festival_apprendre_2021/en/th-page-04.png
     alt: "Page 4"
 ---
 
